@@ -1,0 +1,37 @@
+﻿<Window x:Class="ProjectsDistributionApp.ViewControllers.SkillsManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectsDistributionApp.ViewControllers"
+        mc:Ignorable="d"
+        Title="Управление навыками" Height="600" Width="800">
+    <Grid>
+        <ListView x:Name="skillList" 
+                  Margin="37,30,37,0"
+                  Height="450"
+                  ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  VerticalAlignment="Top"
+                  MouseDoubleClick="ModifySkill">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Id}" Header="Id" Width="60"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=SkillName}" Header="SkillName" Width= "320"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button 
+            VerticalAlignment="Top"
+            Margin="37,484,620,0"
+            Height="30" 
+            Content="Добавить Навык"
+            Click="AddSkill"/>
+        <Button
+            VerticalAlignment="Top"
+            Margin="37,519,620,0"
+            Height="30"
+            Content="Назад"
+            Click="Back"/>
+    </Grid>
+</Window>

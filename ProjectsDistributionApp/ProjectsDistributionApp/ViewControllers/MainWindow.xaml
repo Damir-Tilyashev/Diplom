@@ -1,0 +1,15 @@
+﻿<Window x:Class="ProjectsDistributionApp.ViewControllers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectsDistributionApp.ViewControllers"
+        mc:Ignorable="d"
+        Title="Меню" Height="600" Width="800">
+    <Grid x:Name="MainMenuGrid">
+        <Button Content="Управление сотрудниками" Click= "RedirectToPersonnelManagement" Margin="300,140,300,0" VerticalAlignment="Top" Height="30"/>
+        <Button Content="Управление проектами" Click= "RedirectToProjectManagement" Margin="300,175,300,0" VerticalAlignment="Top" Height="30"/>
+        <Button Content="Управление навыками" Click= "RedirectToSkillsManagement" Margin="300,210,300,0" VerticalAlignment="Top" Height="30"/>
+        <Button Content="Перераспределить сотрудников" Click= "Redistribute" Margin="300,290,300,0" VerticalAlignment="Top" Height="30"/>
+    </Grid>
+</Window>

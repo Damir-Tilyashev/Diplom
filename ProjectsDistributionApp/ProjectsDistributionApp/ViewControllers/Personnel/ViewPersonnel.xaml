@@ -1,0 +1,57 @@
+﻿<Window x:Class="ProjectsDistributionApp.ViewControllers.ViewPersonnel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectsDistributionApp.ViewControllers"
+        mc:Ignorable="d"
+        Title="Обзор сотрудника" Height="800" Width="450">
+    <Grid>
+        <StackPanel>
+            <TextBlock x:Name="employee"
+                       Margin="0,0,0,0">
+                <Run FontSize= "14">Фамилия:</Run>
+                <LineBreak/>
+                <Run x:Name="SecondName" FontSize="20" />
+                <LineBreak/>
+                <Run FontSize= "14">Имя:</Run>
+                <LineBreak/>
+                <Run x:Name="FirstName" FontSize="20" />
+                <LineBreak/>
+                <Run FontSize= "14">Отчество:</Run>
+                <LineBreak/>
+                <Run x:Name="Patronymic" FontSize="20" />
+                <LineBreak/>
+                <Run FontSize= "14">Должность:</Run>
+                <LineBreak/>
+                <Run x:Name="Position" FontSize="14"/>
+                <LineBreak/>
+                <Run FontSize= "14">Максимальная загруженность:</Run>
+                <LineBreak/>
+                <Run x:Name="MaxLoad" FontSize="14"/>
+                <LineBreak/>
+            </TextBlock>
+            <TextBlock Text="Навыки:" VerticalAlignment="Top"
+                       Margin="0,5,0,0"
+                       FontSize="14"/>
+            <ListView x:Name="Skills"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Top"
+                     Width="400" Height="200" 
+                     Margin="0,5,0,0">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Skill}" Header="SkillName" Width="320"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Value}" Header="Grade" Width= "70"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button Content="Посмотреть участие в проектах"
+                    HorizontalAlignment="Center"
+                    Margin="0,5,0,0"
+                    Click="ViewRole"/>
+        </StackPanel>
+        <Button Content="Изменить" Click="ChangeThisEmployee" VerticalAlignment="Top" Margin="120,680,120,0"/>
+        <Button Content="Удалить" Click="DeleteThisEmployee" VerticalAlignment="Top" Margin="120, 710, 120, 0"/>
+    </Grid>
+</Window>

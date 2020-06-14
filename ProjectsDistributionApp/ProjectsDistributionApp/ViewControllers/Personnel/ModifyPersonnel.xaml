@@ -1,0 +1,38 @@
+﻿<Window x:Class="ProjectsDistributionApp.ViewControllers.ModifyPersonnel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectsDistributionApp.ViewControllers"
+        mc:Ignorable="d"
+        Title="Изменить данные" Height="450" Width="800">
+    <Grid>
+        <StackPanel x:Name="Panel" Margin="20,0,31,0">
+            <TextBlock Width="400">Фамилия:</TextBlock>
+            <TextBox x:Name="SecondName" Width="200" HorizontalAlignment="Left"/>
+            <TextBlock Width="400">Имя:</TextBlock>
+            <TextBox x:Name="FirstName" Width="200" HorizontalAlignment="Left"/>
+            <TextBlock Width="400">Отчество:</TextBlock>
+            <TextBox x:Name="Patronymic" Width="200" HorizontalAlignment="Left"/>
+            <TextBlock Width="400">Максимальная нагрузка:</TextBlock>
+            <TextBox x:Name="MaxLoad" Width="135" HorizontalAlignment="Left"/>
+            <ListBox x:Name="SkillsList" Height="100">
+            </ListBox>
+            <Button Content="Добавить навык" HorizontalAlignment="Left" Click="AddSkill"/>
+        </StackPanel>
+        <Button
+            Content="Применить" 
+            VerticalAlignment="Bottom" 
+            HorizontalAlignment="Left" 
+            Margin="40,0,0,100"
+            Width="180"
+            Click="Submit"/>
+        <Button
+            Content="Отмена" 
+            VerticalAlignment="Bottom" 
+            HorizontalAlignment="Left" 
+            Margin="230,0,0,100"
+            Width="180"
+            Click="Cancel"/>
+    </Grid>
+</Window>

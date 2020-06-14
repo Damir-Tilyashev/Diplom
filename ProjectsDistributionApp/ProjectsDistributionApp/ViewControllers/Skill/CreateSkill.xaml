@@ -1,0 +1,29 @@
+﻿<Window x:Class="ProjectsDistributionApp.ViewControllers.CreateSkill"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectsDistributionApp.ViewControllers"
+        mc:Ignorable="d"
+        Title="Добавить навык" Height="200" Width="400">
+    <Grid>
+        <TextBlock 
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center" Margin="0,10,0,0">
+            Название Навыка
+        </TextBlock>
+        <TextBox x:Name="SkillName" 
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"
+                 Width="150"
+                 Height="20"/>
+        <Button Content="Создать"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left" Margin="25,0,0,10" Width="66" Height="20"
+                Click="Submit"/>
+        <Button Content="Отмена"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left" Margin="109,0,0,10" Width="66" Height="20"
+                Click="Cancel"/>
+    </Grid>
+</Window>
